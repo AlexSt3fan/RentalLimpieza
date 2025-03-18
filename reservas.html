@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="stylesprueba.css">
+    <script src="scriptsprueba.js" defer></script>
+    <style>
+        body {
+            margin-top: 2%; /* Increased top margin */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <nav>
+                <ul class="header-links">
+                    <li><a href="paginaprueba.html"><img decoding="async" src="media/Logo.jpg" class="header-logo" style="padding-right: 28px;" alt="Limpieza Renta Holidays"></a></li>
+                    <li><a href="paginaprueba.html" class="enlace" style="padding-right: 28px; font-size: large;">Inicio</a></li>
+                    <li><a href="productos.html" class="enlace" style="padding-right: 28px; font-size: large;">Productos</a></li>
+                    <li><a href="informacion.html" class="enlace" style="padding-right: 28px; font-size: large;">Conócenos</a></li>
+                    <li><a href="reservas.html" class="enlace" style="padding-right: 28px; font-size: large;">Reservas</a></li>
+                    <li><img decoding="async" src="media/logo_turisme_cv_gva.png" class="header-logo" style="float: right;" alt="Turisme Generalitat Valenciana"></a></li>
+            </nav>
+        </div>
+        <div class="top-divider full-width"></div>
+    </header>
+    <div style="margin-top: 3%;">
+    <aside>
+        <button class="indice-toggle">&#9776; Índice</button> <!-- Botón para móvil -->
+        <div class="indice-content">
+            <div class="side-divider"></div>
+            <h2>CATEGORÍAS</h2>
+            <ul>
+                <li><a href="limpieza.html" class="enlace">LIMPIEZA </a>(<span id="contadorLimpieza">0</span>)</li>
+                <li><a href="cheks.html" class="enlace">CHECK-IN/CHECK-OUT </a>(<span id="contadorCheks">0</span>)</li>
+                <li><a href="decoracion.html" class="enlace">REFORMAS Y MANTENIMIENTO </a>(<span id="contadorDecoracion">0</span>)</li>
+                <li><a href="dormitorio.html" class="enlace">RENTING ROPA DE CAMA </a>(<span id="contadorDormitorio">0</span>)</li>
+                <li><a href="toallas.html" class="enlace">TOALLAS </a>(<span id="contadorToallas">0</span>)</li>
+            </ul>
+            <div class="top-divider full-width"></div>
+            <h2>DELEGACIONES</h2>
+            <ul>
+                <li><a href="castellon.html" class="enlace">CASTELLÓN </a></li>
+                <li><a href="valencia.html" class="enlace">VALENCIA</a></li>
+                <li><a href="alicante.html" class="enlace">ALICANTE</a></li>
+                <li><a href="https://www.rentalholidays.es/" class="enlace">GESTIÓN DE PROPIEDADES</a></li>
+            </ul>
+        </div>
+    </aside>
+    <style>
+        /* Estilos por defecto para escritorio */
+        .rows {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            overflow: auto;
+        }
+    
+        .block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .image {    
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            box-shadow: 0;
+            transition: box-shadow 1s;
+        }
+    
+        .imageMedia {
+            width: 170px;
+            height: 170px;
+        }
+    
+        .name {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .rows {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .block:first-child, .block:nth-child(2), .block:nth-child(3), .block:nth-child(4) {
+                width: 100%;
+            }
+    
+            /* Ajustar el tamaño de la imagen en dispositivos móviles */
+            .imageMedia {
+                width: 120px;
+                height: 120px;
+            }
+    
+            aside.active {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 80%;
+                height: 100vh;
+                background: white;
+                z-index: 1000;
+                padding-top: 60px;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            aside.active::-webkit-scrollbar {
+                width: 8px;
+            }
+    
+            aside.active::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 4px;
+            }
+    
+            aside.active::-webkit-scrollbar-thumb {
+                background: #2db4a7;
+                border-radius: 4px;
+            }
+    
+            aside.active::-webkit-scrollbar-thumb:hover {
+                background: #239b8f;
+            }
+    
+            .indice-content.active {
+                display: block;
+                height: calc(100vh - 80px);
+                overflow-y: auto;
+                padding: 20px;
+            }
+        }
+    </style>
+    <main>
+        <div id="content" class="large-9 left col col-divided" role="main"></div>
+        <h1>GESTIONA TU RESERVA</h1>
+        <p1>Selecciona los productos que te interesen contratar y rellena los campos para tener un presupuesto aproximado</p1>
+        <ul>
+        <section class="productos-seleccionados">
+            <h2>Servicios de limpieza a contratar</h2>
+                <section id="servicios-section">
+                    <h3>¿Qué servicio quieres contratar?(*)</h3>
+                    <select name="servicio" class="hidden">
+                        <option value="1semana">1 vez a la semana (18€ + IVA)</option>
+                        <option value="2semanas">1 vez cada dos semanas (20€ + IVA)</option>
+                        <option value="Limpieza-puntual">Limpieza puntual (23€ + IVA)</option>
+                        <option value="Limpieza profunda">Limpieza profunda (30€+IVA)</option>
+                        <option value="2*semana">2 veces a la semana (28€ + IVA)</option>
+                        <option value="Limpieza periodica">Resto a consultar por WhatsApp</option>
+                    </select>
+                </section>
+                <div class="grid-container">
+                            <section id="servicios-section">
+                                <h3>¿Cuántas horas nos necesitas?(*)</h3>
+                                <select name="horas" class="hidden">
+                                    <option value="1">1 hora</option>
+                                    <option value="2">2 horas</option>
+                                    <option value="3">3 horas</option>
+                                    <option value="4">4 hora</option>
+                                    <option value="5">5 horas</option>
+                                    <option value="6">6 horas</option>
+                                    <option value="7">7 hora</option>
+                                    <option value="8">8 horas</option>
+                                </select>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>¿A que hora quieres que vayamos?(*)</h3>
+                                <select name="hora" class="hidden">
+                                    <option value="7am">7:00</option>
+                                    <option value="8am">8:00</option>
+                                    <option value="9am">9:00</option>
+                                    <option value="10am">10:00</option>
+                                    <option value="11am">11:00</option>
+                                    <option value="12pm">12:00</option>
+                                    <option value="13pm">13:00</option>
+                                    <option value="14pm">14:00</option>
+                                    <option value="15pm">15:00</option>
+                                    <option value="16pm">16:00</option>
+                                    <option value="17pm">17:00</option>
+                                    <option value="18pm">18:00</option>
+                                    <option value="19pm">19:00</option>
+                                    <option value="20pm">20:00</option>
+                                </select>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>¿Necesitas servicio de planchado?(*)</h3>
+                                <select name="planchado" class="hidden">
+                                    <option value="no">no</option>
+                                    <option value="1hora">1 hora (15€, aproximadamente 7 piezas)</option>
+                                    <option value="2horas">2 horas (30€, aproximadamente 14 piezas)</option>
+                                    <option value="3horas">3 horas (45€, aproximadamente 21 piezas)</option>
+                                    <option value="4horas">4 horas (60€, aproximadamente 28 piezas)</option>                                   
+                                </select>
+                            </section>
+                            <style>
+                                #miTextarea {
+                                    width: 100%;
+                                    height: 100px;
+                                    padding: 10px;
+                                    margin-top: 5px;
+                                    font-family: Arial, sans-serif;
+                                }
+                                
+                                #miTextarea2 {
+                                    width: 100%;
+                                    height: 50px;
+                                    padding: 10px;
+                                    margin-top: 5px;
+                                    font-family: Arial, sans-serif;
+                                }
+                            </style>
+                              <section id="servicios-section">
+                                <h3>¿Vives con algun animal?</h3>
+                                <textarea id="miTextarea2" name="animal" placeholder="Escribe aquí..."></textarea>
+                            </section>
+                        </section>
+                        <section id="servicios-section">
+                            <h3>Nombre y apellidos(*)</h3>
+                            <textarea id="miTextarea2" name="nombre" placeholder="Escribe aquí..."></textarea>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>Calle - Número -Piso(*)</h3>
+                                <textarea id="miTextarea2" name="direccion" placeholder="Escribe aquí..."></textarea>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>Código postal(*)</h3>
+                                <textarea id="miTextarea2" name="cp" placeholder="Escribe aquí..."></textarea>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>Selecciona tu poblacion(*)</h3>
+                                <select name="poblacion" class="hidden">
+                                    <option value="ELEGIR">ELEGIR POBLACION</option>
+                                    <option value="ALCOSSEBRE">ALCOSSEBRE</option>
+                                    <option value="ALMASSORA">ALMASSORA</option>
+                                    <option value="BENICÀSSIM">BENICÀSSIM</option>
+                                    <option value="BENIDORM">BENIDORM</option>
+                                    <option value="BORRIOL">BORRIOL</option>
+                                    <option value="CÀLIG">CÀLIG</option>
+                                    <option value="CASTELLÓN DE LA PLANA">CASTELLÓN DE LA PLANA</option>
+                                    <option value="CULLA">CULLA</option>
+                                    <option value="EL GRAO DE CASTELLÓN">EL GRAO DE CASTELLÓN</option>
+                                    <option value="FUENTE LA REINA">FUENTE LA REINA</option>
+                                    <option value="LUCENA DEL CID">LUCENA DEL CID</option>
+                                    <option value="MONCÓFAR">MONCÓFAR</option>
+                                    <option value="OROPESA DEL MAR">OROPESA DEL MAR</option>
+                                    <option value="PEÑISCOLA">PEÑISCOLA</option>
+                                    <option value="TORREBLANCA">TORREBLANCA</option>
+                                    <option value="VINARÒS">VINARÒS</option>
+                                    <option value="SANTA POLA">SANTA POLA</option>
+                                    <option value="SAN BARTOLOME">SAN BARTOLOME</option>
+                                    <option value="TORREVIEJA">TORREVIEJA</option>
+                                </select>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>Teléfono(*) </h3>
+                                <textarea id="miTextarea2" name="telefono" placeholder="Escribe aquí..."></textarea>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>Correo electrónico(*)</h3>
+                                <textarea id="miTextarea2" name="email" placeholder="Escribe aquí..."></textarea>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>Indicaciones a seguir </h3>
+                                <textarea id="miTextarea" name="indicaciones" placeholder="Escribe aquí..."></textarea>
+                            </section>
+                            <section id="servicios-section">
+                                <h3>Código de descuento</h3>
+                                <textarea id="miTextarea2" name="descuento" placeholder="Escribe aquí..."></textarea>
+                            </section>
+                            <!-- Buttons container -->
+                            <script>
+                            function recogerDatos() {
+                                const servicio = document.querySelector('select[name="servicio"]').value;
+                                const horas = document.querySelector('select[name="horas"]').value;
+                                const hora = document.querySelector('select[name="hora"]').value;
+                                const planchado = document.querySelector('select[name="planchado"]').value;
+                                const animal = document.getElementsByName('animal')[0].value;
+                                const nombre = document.getElementsByName('nombre')[0].value;
+                                const direccion = document.getElementsByName('direccion')[0].value;
+                                const cp = document.getElementsByName('cp')[0].value;
+                                const poblacion = document.querySelector('select[name="poblacion"]').value;
+                                const telefono = document.getElementsByName('telefono')[0].value;
+                                const email = document.getElementsByName('email')[0].value;
+                                const indicaciones = document.getElementsByName('indicaciones')[0].value;
+                                const descuento = document.getElementsByName('descuento')[0].value;
+
+                                // Validaciones: asegurarse de que los campos obligatorios no estén vacíos
+                                if (nombre && direccion && cp && poblacion && telefono && email) {
+                                    const mensaje = `
+                                    Servicio: ${servicio}
+                                    Horas: ${horas}
+                                    Hora preferida: ${hora}
+                                    Planchado: ${planchado}
+                                    Animal: ${animal}
+                                    Nombre: ${nombre}
+                                    Dirección: ${direccion}
+                                    CP: ${cp}
+                                    Población: ${poblacion}
+                                    Teléfono: ${telefono}
+                                    Email: ${email}
+                                    Indicaciones: ${indicaciones}
+                                    Código descuento: ${descuento}`;
+
+                                    return encodeURIComponent(mensaje);
+                                }
+                                else{
+                                    alert("Los campos obligatorios no están rellenados");
+                                    return false;
+                                }
+                            }
+
+                            
+                            function enviarWhatsApp() {
+                                const mensaje = recogerDatos();
+                                if(mensaje!=false)
+                                    window.location.href = `https://api.whatsapp.com/send?phone=34655833488&text=${mensaje}`;
+                            }
+                            
+                            function enviarEmail() {
+                                const mensaje = recogerDatos();
+                                if(mensaje!=false)
+                                    window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=rentalholidays.es@gmail.com&su=Reserva de Servicio&body=${mensaje}`;
+                            }
+                            </script>
+                            
+                            <!-- Modificar los botones -->
+                            <section id="servicios-section" style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 20px;">
+                                <button onclick="enviarEmail()" class="consultarProd" style="width: 200px;">Enviar por Email</button>
+                                <button onclick="enviarWhatsApp()" class="consultarProd" style="width: 200px;">Enviar por WhatsApp</button>
+                            </section>
+                </div>
+            </ul>
+        </section>
+    </main>
+    </div>
+    <style>
+        /* Estilos por defecto para escritorio */
+        .rows {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            overflow: auto;
+        }
+    
+        .block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .image {    
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            box-shadow: 0;
+            transition: box-shadow 1s;
+        }
+    
+        .imageMedia {
+            width: 170px;
+            height: 170px;
+        }
+    
+        .name {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .rows {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .block:first-child, .block:nth-child(2), .block:nth-child(3), .block:nth-child(4) {
+                width: 100%;
+            }
+    
+            /* Ajustar el tamaño de la imagen en dispositivos móviles */
+            .imageMedia {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+    
+    
+   
+        </main>
+        <style>
+            /* Add this to your existing styles */
+            @media (max-width: 768px) {
+                select {
+                    width: 100%;
+                    max-width: 300px;
+                    padding: 8px;
+                    margin: 5px 0;
+                    font-size: 14px;
+                }
+
+                #servicios-section {
+                    width: 100%;
+                    padding: 10px;
+                    margin: 0 auto;
+                }
+
+                .grid-container {
+                    padding: 10px;
+                }
+
+                /* Adjust text size for better mobile display */
+                #servicios-section h3 {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+            }
+        </style>
+        
+        
+       
+            </main>
+            <footer>
+                <h2>Redes sociales</h2>
+                <section class="Redes-sociales">
+                    <a href="mailto:rentalholidays.es@gmail.com">
+                        <div class="imagen-container">
+                            <img src="media/gmail.png" alt="gmail" class="imagen-normal">
+                            <img src="media/gmailhover.png" alt="gmail hover" class="imagen-hover">
+                        </div>
+                    </a>
+                    <a href="tel:+34655833488">
+                        <div class="imagen-container">
+                            <img src="media/llamar.png" alt="llamar" class="imagen-normal">
+                            <img src="media/llamarhover.png" alt="llamar hover" class="imagen-hover">
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/rental_holidays/">
+                        <div class="imagen-container">
+                            <img src="media/instagram.png" alt="instagram" class="imagen-normal">
+                            <img src="media/1000047516.png" alt="instagram hover" class="imagen-hover">
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/rentalholidays">
+                        <div class="imagen-container">
+                            <img src="media/facebook.png" alt="facebook" class="imagen-normal">
+                            <img src="media/facebookhover.png" alt="facebook hover" class="imagen-hover">
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@rentalholidays.es">
+                        <div class="imagen-container">
+                            <img src="media/tiktok.png" alt="tiktok" class="imagen-normal">
+                            <img src="media/tiktokhover.png" alt="tiktok hover" class="imagen-hover">
+                        </div>
+                    </a>
+                </section>
+            </footer>
+                <!-- Botón de WhatsApp -->
+                <a href="https://api.whatsapp.com/send?phone=34655833488&text=Hola!%20" 
+                target="_blank" 
+                class="whatsapp-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
+                </a>
+                
+                <!-- Estilos CSS para el botón -->
+                <style>
+                .whatsapp-button {
+                 position: fixed;
+                 bottom: 20px;
+                 right: 20px;
+                 z-index: 1000;
+                 background-color: #25D366; /* Color de WhatsApp */
+                 border-radius: 50%;
+                 padding: 10px;
+                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                 transition: background-color 0.3s ease;
+                }
+                
+                .whatsapp-button:hover {
+                 background-color: #128C7E; /* Color de WhatsApp al pasar el mouse */
+                }
+                
+                .whatsapp-button img {
+                 display: block;
+                }
+                </style>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const menuToggle = document.createElement('button');
+                        menuToggle.innerHTML = '&#9776;';
+                        menuToggle.className = 'menu-toggle';
+                        document.querySelector('.header-content').appendChild(menuToggle);
+                
+                        menuToggle.addEventListener('click', function() {
+                            const nav = document.querySelector('nav ul');
+                            nav.classList.toggle('active');
+                        });
+                    });
+                </script>
+                 <script>
+                 document.addEventListener('DOMContentLoaded', function() {
+            // Botón de índice para el aside
+            const indiceToggle = document.querySelector('.indice-toggle');
+            const indiceContent = document.querySelector('.indice-content');
+        
+            if (indiceToggle && indiceContent) {
+                indiceToggle.addEventListener('click', function() {
+                    console.log("Botón de índice clickeado"); // Debug
+                    indiceContent.classList.toggle('active');
+                });
+            }
+        });
+                </script>
+                
+        </body>
+    </html>

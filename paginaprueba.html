@@ -11,31 +11,37 @@
             margin-top: 2%; /* Increased top margin */
         }
 
-        /* Add these new styles for the aside scrollbar */
         aside {
-            overflow-y: auto;
-            max-height: calc(100vh - 180px);
-            scrollbar-width: thin;
-            scrollbar-color: #2db4a7 #f1f1f1;
-        }
+    overflow-y: hidden; /* Oculta la barra de desplazamiento por defecto */
+    max-height: calc(100vh - 180px);
+    scrollbar-width: thin;
+    scrollbar-color: #2db4a7 #f1f1f1;
+    transition: overflow 0.3s ease-in-out; /* Suaviza el efecto */
+}
 
-        aside::-webkit-scrollbar {
-            width: 8px;
-        }
+aside:hover {
+    overflow-y: auto; /* Muestra la barra de desplazamiento cuando se pasa el cursor */
+}
 
-        aside::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 4px;
-        }
+/* Estilos para WebKit (Chrome, Safari, Edge) */
+aside::-webkit-scrollbar {
+    width: 8px;
+}
 
-        aside::-webkit-scrollbar-thumb {
-            background: #2db4a7;
-            border-radius: 4px;
-        }
+aside::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
 
-        aside::-webkit-scrollbar-thumb:hover {
-            background: #239b8f;
-        }
+aside::-webkit-scrollbar-thumb {
+    background: #2db4a7;
+    border-radius: 4px;
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+    background: #239b8f;
+}
+
     </style>
 </head>
 
@@ -60,7 +66,7 @@
         <div class="indice-content">
             <div class="side-divider"></div>
             <h2>CATEGORÍAS</h2>
-            <ul>
+            <ul class="listacategorias">
                 <li><a href="limpieza.html" class="enlace">LIMPIEZA </a>(<span id="contadorLimpieza">0</span>)</li>
                 <li><a href="cheks.html" class="enlace">CHECK-IN/CHECK-OUT </a>(<span id="contadorCheks">0</span>)</li>
                 <li><a href="decoracion.html" class="enlace">REFORMAS Y MANTENIMIENTO </a>(<span id="contadorDecoracion">0</span>)</li>
@@ -69,7 +75,7 @@
             </ul>
             <div class="top-divider full-width"></div>
             <h2>DELEGACIONES</h2>
-            <ul>
+            <ul class="listadelegaciones">
                 <li><a href="castellon.html" class="enlace">CASTELLÓN </a></li>
                 <li><a href="valencia.html" class="enlace">VALENCIA</a></li>
                 <li><a href="alicante.html" class="enlace">ALICANTE</a></li>
@@ -78,7 +84,7 @@
         </div>
     </aside>
     <main>
-        <div id="content" class="large-9 left col col-divided" role="main"></div>
+        <div id="content" class="large-11 left col col-divided" role="main"></div>
         <h1>SERVICIOS Y PRODUCTOS RENTAL HOLIDAYS</h1>
         <p>Tu Solución Integral en Limpieza, Mantenimiento y Gestión de Propiedades turísticas y particulares.</p>
         <ul>

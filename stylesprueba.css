@@ -89,10 +89,7 @@ main {
     margin-bottom: 30px; /* Espacio entre el main y el footer */
     font-family:tipo-letra;
 }
-@font-face {
-    font-family: tipo-letra;
-    src: url('BaiJamjuree-Regular.ttf');
- }
+
  p {
     font-family: tipo-letra;
  }
@@ -132,7 +129,7 @@ h3 {
 }
 
 a.header-content:hover {
-    color:red;
+    background-color: red;
 }
 
 a.enlace {
@@ -140,6 +137,7 @@ a.enlace {
     text-decoration: none; /* Elimina el subrayado por defecto */
     position: relative; /* Necesario para el pseudo-elemento */
     display: inline-block; /* Asegura que el subrayado no ocupe toda la línea */
+    z-index: 1;
 }
 
 a.enlace::after {
@@ -148,9 +146,13 @@ a.enlace::after {
     left: 0;
     bottom: -2px; /* Ajusta la posición del subrayado */
     width: 0; /* Inicia sin ancho */
-    height: 2px; /* Grosor de la línea */
+    height: 28px; /* Grosor de la línea */
     background: red; /* Color de la línea */
     transition: width 0.2s ease; /* Animación de izquierda a derecha */
+    z-index: -1;
+}
+a.enlace:hover{
+    color: whitesmoke;
 }
 
 a.enlace:hover::after {
@@ -1227,4 +1229,72 @@ p {
     .grid-alicante {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+aside {
+    font-family: Arial, sans-serif;
+}
+
+.indice-content {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Estilo de los elementos de lista */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px; /* Menos espacio entre elementos de la lista */
+    line-height: 1.3; /* Menor espacio entre líneas */
+}
+
+/* Recuadros más visibles */
+.side-divider, .top-divider {
+    background-color: #2db4a7; /* Color de fondo para divisores */
+    height: 2px; /* Grosor del divisor */
+    margin: 15px 0;
+}
+
+/* Estilos adicionales para los enlaces */
+.enlace {
+    color: #333;
+    text-decoration: none;
+    display: block; /* Hace que todo el <a> sea clickeable */
+    padding: 5px 0;
+}
+
+.enlace:hover {
+    color: #2db4a7; /* Color al pasar el ratón */
+}
+
+/* Estilo para el contador de cada categoría */
+#contadorLimpieza, #contadorCheks, #contadorDecoracion, 
+#contadorDormitorio, #contadorToallas {
+    color: #888; /* Color gris para los contadores */
+}
+
+/* Estilo para los botones */
+.indice-toggle {
+    background-color: #2db4a7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.indice-toggle:hover {
+    background-color: #239b8f;
+}
+
+.listacategorias:hover{
+    border-color: #000000;
 }

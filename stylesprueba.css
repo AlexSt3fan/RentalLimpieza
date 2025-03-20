@@ -2,7 +2,7 @@ html, body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family:tipo-letra;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     
 }
@@ -81,17 +81,17 @@ input[type="range"] {
 body {
     display: flex;
     flex-direction: column;
-    font-family:tipo-letra;
+    font-family: 'Open Sans', sans-serif;
     font-size:15px;
 }
 main {
     flex: 1 0 auto;
     margin-bottom: 30px; /* Espacio entre el main y el footer */
-    font-family:tipo-letra;
+    font-family: 'Open Sans', sans-serif;
 }
 
  p {
-    font-family: tipo-letra;
+    font-family: 'Open Sans', sans-serif;
  }
 header {
     background-color: white;
@@ -102,7 +102,7 @@ header {
     width: 100%;
     font-weight: bold;
     z-index: 1000;
-    font-family:tipo-letra;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .header-content img{
@@ -117,6 +117,7 @@ a {
     color: #2db4a7;
     font-weight: bold;
 }
+
 h3 {
     font-weight: bold;
     color: #2db4a7;
@@ -144,24 +145,27 @@ a.enlace::after {
     content: ''; /* Necesario para que el pseudo-elemento funcione */
     position: absolute;
     left: 0;
-    bottom: -2px; /* Ajusta la posición del subrayado */
-    width: 0; /* Inicia sin ancho */
-    height: 28px; /* Grosor de la línea */
-    background: red; /* Color de la línea */
-    transition: width 0.2s ease; /* Animación de izquierda a derecha */
+    overflow: hidden;
+    bottom: 0px; /* Ajusta la posición del subrayado */
+    width: 100%; /* Inicia con ancho */
+    height: 0; /* Altura inicial de la línea */
+    background: rgb(15, 49, 185); /* Color de la línea */
+    transition: height 0.2s ease; /* Animación de abajo a arriba */
     z-index: -1;
 }
+
 a.enlace:hover{
     color: whitesmoke;
 }
 
 a.enlace:hover::after {
-    width: 100%; /* La línea se expande hasta el 100% del ancho del texto */
+    height: 100%; /* La línea se expande hasta el 100% del ancho del texto */
 }
+
 
 a.enlace-main {
     color: #34817a; /* Color del texto */
-    text-decoration: none; /* Elimina el subrayado por defecto */
+    text-decoration: none; /* Elimina el subrayado por defecto */ 
     position: relative; /* Necesario para el pseudo-elemento */
     display: inline-block; /* Asegura que el subrayado no ocupe toda la línea */
 }
@@ -220,9 +224,10 @@ aside {
     position: fixed; /* Posición fija */
     list-style: none;
     margin-top: 180px;
-    margin-left: 230px;
+    margin-left: 100px;
     z-index: 100;
     font-size:medium;
+    height: 480px;
 }
 .indice-content {
     display: block;
@@ -369,7 +374,7 @@ main h2 {
     width: 200px;
     height: 40px;
     font-size: 10px;
-    font-family:tipo-letra;
+    font-family: 'Open Sans', sans-serif;
     border: 1px solid ;
     border-color: #2db4a7;
     border-radius: 20px;
@@ -380,7 +385,7 @@ main h2 {
     width: 675px;
     height: 40px;
     font-size: 20px;
-    font-family:tipo-letra;
+    font-family: 'Open Sans', sans-serif;
     border: 1px solid ;
     border-color: #2db4a7;
     border-radius: 20px;
@@ -410,7 +415,7 @@ main h2 {
     width: 769px;
     resize: none;
     padding: 8px;
-    font-family:tipo-letra;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     border: 1px solid #3d3d3d;
     border-radius: 4px;
@@ -423,11 +428,6 @@ main h2 {
 }
 
 
-.top-divider {
-    border-top: 2px solid;
-    color:#34817a;
-    opacity: 0.2;
-}
 
 .expand, .full-width {
     display: block;
@@ -489,7 +489,7 @@ footer {
     width: 100%;
     text-align: center;
     border-top: 2px solid rgb(39, 118, 121, 0.2);
-    padding: 20px 0;
+    padding: 8px 0;
     background-color: white;
     margin-top: auto;
 }
@@ -1232,7 +1232,7 @@ p {
 }
 
 aside {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .indice-content {
@@ -1297,4 +1297,109 @@ li {
 
 .listacategorias:hover{
     border-color: #000000;
+}
+
+/* 1. Importa la fuente Open Sans (o la que prefieras) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+  
+/* 2. Definir la animación de aparición (fade + scale) */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 3. Ajustar contenedor del menú */
+.menu-item {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* 4. Submenú oculto por defecto */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -14px;
+  background: whitesmoke;     /* Fondo claro */
+  list-style: none;
+  margin: 0;
+  padding: 15px 20px;         /* Aumentamos padding para dar aire */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  min-width: 220px;          /* Para evitar que se corte el texto */
+  border-radius: 6px;        /* Bordes suaves */
+  line-height: 1.6;          /* Espacio entre líneas */
+}
+
+/* 5. Mostrar submenú + animación al hacer hover */
+.menu-item:hover .submenu {
+  display: block;
+  animation: fadeInScale 0.3s ease forwards;
+}
+
+/* 6. Estilo de cada ítem del submenú */
+.submenu li {
+  margin: 5px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #a19999;   /* Color principal de texto */
+  font-size: 16px;
+  font-weight: 600; /* Un poco más gruesa la fuente */
+  white-space: nowrap; /* Evita salto de línea */
+  transition: color 0.3s ease;
+}
+
+/* 7. Hover en cada ítem */
+.submenu li:hover {
+  background-color: #002244; /* Azul corporativo */
+  transform: scale(1.03);    /* Efecto de escalado suave */
+  border-radius: 4px;        /* Para que se note el recuadro */
+}
+
+.submenu li:hover a {
+  color: whitesmoke;         /* Texto en blanco humo */
+}
+
+body {
+    margin-top: 2%; /* Increased top margin */
+}
+
+aside {
+overflow-y: hidden; /* Oculta la barra de desplazamiento por defecto */
+max-height: calc(100vh - 180px);
+scrollbar-width: thin;
+scrollbar-color: #2db4a7 #f1f1f1;
+transition: overflow 0.3s ease-in-out; /* Suaviza el efecto */
+}
+
+aside:hover {
+overflow-y: auto; /* Muestra la barra de desplazamiento cuando se pasa el cursor */
+}
+
+/* Estilos para WebKit (Chrome, Safari, Edge) */
+aside::-webkit-scrollbar {
+width: 8px;
+}
+
+aside::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 4px;
+}
+
+aside::-webkit-scrollbar-thumb {
+background: #2db4a7;
+border-radius: 4px;
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+background: #239b8f;
 }

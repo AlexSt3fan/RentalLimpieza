@@ -149,7 +149,7 @@ a.enlace::after {
     bottom: 0px; /* Ajusta la posición del subrayado */
     width: 100%; /* Inicia con ancho */
     height: 0; /* Altura inicial de la línea */
-    background: rgb(15, 49, 185); /* Color de la línea */
+    background: #0f31b9; /* Color de la línea */
     transition: height 0.2s ease; /* Animación de abajo a arriba */
     z-index: -1;
 }
@@ -502,8 +502,8 @@ footer {
 }
 .imagen-container {
     position: relative;
-    width: 18px;  /* Tamaño más pequeño */
-    height: 18px; /* Tamaño más pequeño */
+    width: 30px;  /* Tamaño más pequeño */
+    height: 30px; /* Tamaño más pequeño */
     cursor: pointer;
 }
 .imagen-container img {
@@ -531,8 +531,8 @@ footer {
     opacity: 1;
 }
 footer h2 {
-    margin-top: 10px;
-    margin-bottom: 30px; /* Espacio debajo del título */
+    margin-top: 5px;
+    margin-bottom: 15px; /* Espacio debajo del título */
     margin-right: 30px;
 }
 
@@ -1360,7 +1360,7 @@ li {
 
 /* 7. Hover en cada ítem */
 .submenu li:hover {
-  background-color: #002244; /* Azul corporativo */
+  background-color: #0f31b9; 
   transform: scale(1.03);    /* Efecto de escalado suave */
   border-radius: 4px;        /* Para que se note el recuadro */
 }

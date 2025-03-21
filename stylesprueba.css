@@ -39,6 +39,23 @@ html, body {
     gap: 10px;
 }
 
+.grid_prueba{
+    background-size: 100%;
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%), url('media/Fondo.jpg');
+    position: absolute;
+    height: 800px;
+    width: 100%;
+    color: white; /* Asegúrate de que el texto sea legible */
+    z-index: -1;
+
+}
+
+.productos-destacados h2 {
+    font-size:  28px;
+    margin-top: 150px; /* Ajusta el valor según el espacio que desees */
+}
+
 input[type="range"] {
     flex: 1;
 }
@@ -90,9 +107,33 @@ main {
     font-family: 'Open Sans', sans-serif;
 }
 
- p {
+p1 {
     font-family: 'Open Sans', sans-serif;
- }
+    font-size: 20px;
+    font-weight: bold;
+    color: #626262;
+}
+
+.titulo-subrayado{
+    font-size: 50px; /* Tamaño de la fuente */
+            color: #2db4a7; /* Color del texto */
+            text-shadow: 
+                2px 2px 0px whitesmoke,   /* Borde negro a la derecha y abajo */
+                -2px -2px 0px whitesmoke, /* Borde negro a la izquierda y arriba */
+                2px -2px 0px whitesmoke,  /* Borde negro a la izquierda y arriba */
+                -2px 2px 0px whitesmoke;  /* Borde negro a la derecha y abajo */
+}
+
+.texto-inicio{
+    color: #5dc1b9;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
 header {
     background-color: white;
     position: fixed; /* Posición fija */
@@ -134,7 +175,7 @@ a.header-content:hover {
 }
 
 a.enlace {
-    color:#a19999; /* Color del texto */
+    color:#474747; /* Color del texto */
     text-decoration: none; /* Elimina el subrayado por defecto */
     position: relative; /* Necesario para el pseudo-elemento */
     display: inline-block; /* Asegura que el subrayado no ocupe toda la línea */
@@ -149,7 +190,7 @@ a.enlace::after {
     bottom: 0px; /* Ajusta la posición del subrayado */
     width: 100%; /* Inicia con ancho */
     height: 0; /* Altura inicial de la línea */
-    background: #0f31b9; /* Color de la línea */
+    background: #2db4a7; /* Color de la línea */
     transition: height 0.2s ease; /* Animación de abajo a arriba */
     z-index: -1;
 }
@@ -253,6 +294,11 @@ aside {
     display: block;
     text-align: left;
     position: relative;
+    text-shadow: 
+                2px 2px 0px whitesmoke,   /* Borde negro a la derecha y abajo */
+                -2px -2px 0px whitesmoke, /* Borde negro a la izquierda y arriba */
+                2px -2px 0px whitesmoke,  /* Borde negro a la izquierda y arriba */
+                -2px 2px 0px whitesmoke;  /* Borde negro a la derecha y abajo */
     z-index: 2;
 }
 
@@ -497,13 +543,13 @@ footer {
 .Redes-sociales {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 15px 0;
+    gap: 50px;
+    margin: 10px 0;
 }
 .imagen-container {
     position: relative;
-    width: 30px;  /* Tamaño más pequeño */
-    height: 30px; /* Tamaño más pequeño */
+    width: 26px;  /* Tamaño más pequeño */
+    height: 26px; /* Tamaño más pequeño */
     cursor: pointer;
 }
 .imagen-container img {
@@ -531,8 +577,8 @@ footer {
     opacity: 1;
 }
 footer h2 {
-    margin-top: 5px;
-    margin-bottom: 15px; /* Espacio debajo del título */
+    margin-top: 10px;
+    margin-bottom: 30px; /* Espacio debajo del título */
     margin-right: 30px;
 }
 
@@ -1322,20 +1368,20 @@ li {
 
 /* 4. Submenú oculto por defecto */
 .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: -14px;
-  background: whitesmoke;     /* Fondo claro */
-  list-style: none;
-  margin: 0;
-  padding: 15px 20px;         /* Aumentamos padding para dar aire */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  z-index: 999;
-  min-width: 220px;          /* Para evitar que se corte el texto */
-  border-radius: 6px;        /* Bordes suaves */
-  line-height: 1.6;          /* Espacio entre líneas */
-}
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -14px;
+    background: whitesmoke;     /* Fondo claro */
+    list-style: none;
+    margin: 0;
+    padding: 15px 20px;         /* Aumentamos padding para dar aire */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    min-width: 220px;          /* Para evitar que se corte el texto */
+    border-radius: 6px;        /* Bordes suaves */
+    line-height: 1.6;          /* Espacio entre líneas */
+  }
 
 /* 5. Mostrar submenú + animación al hacer hover */
 .menu-item:hover .submenu {
@@ -1360,7 +1406,7 @@ li {
 
 /* 7. Hover en cada ítem */
 .submenu li:hover {
-  background-color: #0f31b9; 
+  background-color: #002244; /* Azul corporativo */
   transform: scale(1.03);    /* Efecto de escalado suave */
   border-radius: 4px;        /* Para que se note el recuadro */
 }

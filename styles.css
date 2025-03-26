@@ -455,8 +455,30 @@ main h2 {
     font-size: 18px;
     color: rgb(0, 0, 0);
     background-color: white;
-    border-color: rgb(185, 92, 92);
+    border-color: rgb(196, 51, 51);
+    border-width: 2px;
 }
+.hidden2{
+    border-width: 2px;
+    border-color: rgb(196, 51, 51);
+    border-style: solid;
+}
+
+/* Animación para hacer que la sección parpadee */
+@keyframes parpadeo {
+    0% { background-color: #ffcccc; } /* Color inicial (puedes cambiarlo) */
+    50% { background-color: #ff6666; } /* Color cuando parpadea */
+    100% { background-color: #ffcccc; } /* Vuelve al color original */
+}
+
+.parpadeo {
+    animation: parpadeo 1s ease-in-out 1; /* Parpadeo que se repite 1 vez */
+}
+
+
+Pd: en "valencia" los iconos le faltan el media/
+
+
 #miTextarea {
     height: 183px;
     width: 769px;
@@ -467,6 +489,7 @@ main h2 {
     border: 1px solid #3d3d3d;
     border-radius: 4px;
 }
+
 .rellenar {
     margin-left: 0px;
     width:777px;
@@ -1369,7 +1392,7 @@ li {
 
 /* 7. Hover en cada ítem */
 .submenu li:hover {
-  background-color: #002244; /* Azul corporativo */
+  background-color: #a19999;
   transform: scale(1.03);    /* Efecto de escalado suave */
   border-radius: 4px;        /* Para que se note el recuadro */
 }
@@ -1552,7 +1575,6 @@ footer{
         .logo{
             margin-right: 14%;
         }
-        
     }
     
     /* Se mantiene la organización en `grid` */

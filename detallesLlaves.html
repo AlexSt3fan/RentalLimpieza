@@ -1,408 +1,425 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles Recogida LLaves</title>
-    <link rel="stylesheet" href="stylesprueba.css">
-    <script src="scriptsprueba.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="57x57" href="media/favicoRental/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="media/favicoRental/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="media/favicoRental/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="media/favicoRental/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="media/favicoRental/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="media/favicoRental/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="media/favicoRental/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="media/favicoRental/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="media/favicoRental/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="media/favicoRental/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="media/favicoRental/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="media/favicoRental/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="media/favicoRental/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <title>Limpieza Rental Holidays</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
 <body>
-    <header>
-        <div class="header-content" style="background-color: whitesmoke;">
-          <nav>
-            <ul class="header-links">
-              <li>
-                <a href="paginaprueba.html">
-                  <img decoding="async" src="media/Logo.png" class="header-logo" style="padding-right: 28px;" alt="Limpieza Renta Holidays">
-                </a>
-              </li>
-              <li>
-                <a href="paginaprueba.html" class="enlace" style="padding-right: 14px; padding-left: 14px; font-size: large;">Inicio</a>
-              </li>
-              <li class="menu-item">
-                <a href="productos.html" class="enlace" style="padding-right: 14px; padding-left: 14px; font-size: large;">Productos</a>
-                <ul class="submenu" style="line-height: 50px;">
-                  <li><a href="limpieza.html">Limpieza</a></li>
-                  <li><a href="cheks.html">Check in / Check out</a></li>
-                  <li><a href="decoracion.html">Reformas y Mantenimiento</a></li>
-                  <li><a href="dormitorio.html">Renting ropa de cama</a></li>
-                  <li><a href="toallas.html">Renting toallas</a></li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="informacion.html" class="enlace" style="padding-right: 14px; padding-left: 14px; font-size: large;">Conócenos</a>
-                <ul class="submenu">
-                    <li><a href="https://www.rentalholidays.es/">Gestión de propiedades</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="reservas.html" class="enlace" style="padding-right: 14px; padding-left: 14px; font-size: large;">Reservas</a>
-              </li>
-              <li>
-                <img decoding="async" src="media/logo_turisme_cv_gva.png" class="header-logo" style="float: right;" alt="Turisme Generalitat Valenciana">
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-    <aside>
-        <button class="indice-toggle">&#9776; Índice</button> <!-- Botón para móvil -->
-        <div class="indice-content">
-            <div class="side-divider"></div>
-            <h2>CATEGORÍAS</h2>
-            <ul>
-                <li><a href="limpieza.html" class="enlace">LIMPIEZA </a></li>
-                <li><a href="cheks.html" class="enlace">CHECK-IN/CHECK-OUT </a></li>
-                <li><a href="decoracion.html" class="enlace">REFORMAS Y MANTENIMIENTO </a></li>
-                <li><a href="dormitorio.html" class="enlace">RENTING ROPA DE CAMA </a></li>
-                <li><a href="toallas.html" class="enlace">RENTING TOALLAS </a></li>
-            </ul>
-            <div class="top-divider full-width"></div>
-            <h2>DELEGACIONES</h2>
-            <ul>
-                <li><a href="castellon.html" class="enlace">CASTELLÓN </a></li>
-                <li><a href="valencia.html" class="enlace">VALENCIA</a></li>
-                <li><a href="alicante.html" class="enlace">ALICANTE</a></li>
-                <li><a href="https://www.rentalholidays.es/" class="enlace">GESTIÓN DE PROPIEDADES</a></li>
-            </ul>
-        </div>
-    </aside>
-    <style>
-        /* Estilos por defecto para escritorio */
-        .rows {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-            align-items: center;
-            overflow: auto;
-        }
-    
-        .block {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        .image {    
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            box-shadow: 0;
-            transition: box-shadow 1s;
-        }
-    
-        .imageMedia {
-            width: 170px;
-            height: 170px;
-        }
-    
-        .name {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    
-        /* Estilos para dispositivos móviles */
-        @media (max-width: 768px) {
-            .rows {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .block:first-child, .block:nth-child(2), .block:nth-child(3), .block:nth-child(4) {
-                width: 100%;
-            }
-    
-            /* Ajustar el tamaño de la imagen en dispositivos móviles */
-            .imageMedia {
-                width: 120px;
-                height: 120px;
-            }
-    
-            aside.active {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 80%;
-                height: 100vh;
-                background: white;
-                z-index: 1000;
-                padding-top: 60px;
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
-                box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-            }
-    
-            aside.active::-webkit-scrollbar {
-                width: 8px;
-            }
-    
-            aside.active::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                border-radius: 4px;
-            }
-    
-            aside.active::-webkit-scrollbar-thumb {
-                background: #2db4a7;
-                border-radius: 4px;
-            }
-    
-            aside.active::-webkit-scrollbar-thumb:hover {
-                background: #239b8f;
-            }
-    
-            .indice-content.active {
-                display: block;
-                height: calc(100vh - 80px);
-                overflow-y: auto;
-                padding: 20px;
-            }
-        }
-    </style>
-    <main>
-        <div id="content" class="large-9 left col col-divided" role="main"></div>
-        <div class="contenedor">
-            <img src="media/entrega de llaves.png" alt="Recogida de llaves" class="imagenDetalles">
-            <div class="texto">
-                <h3>Recepcion de huespedes</h3>
-                <h4 class="categoria">Categoria: 
-                    <a href="cheks.html" class="enlace-main">
-                        Checkin
+    <div class="layout-container">
+        <header>
+            <div class="header-content" style="background-color: whitesmoke;">
+            <nav style="font-size: large">
+                <ul class="header-links">
+                <li class="logo">
+                    <a href="index.html">
+                    <img decoding="async" src="media/Logo.png" class="header-logo" style="padding-right: 28px;" alt="Limpieza Renta Holidays">
                     </a>
-                </h4>
+                </li>
+                <li>
+                    <a href="index.html" class="enlace" style="padding-right: 14px; padding-left: 14px;">Inicio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="productos.html" class="enlace" style="padding-right: 14px; padding-left: 14px;">Productos</a>
+                    <ul class="submenu" style="line-height: 50px;">
+                    <li><a href="limpieza.html">Limpieza</a></li>
+                    <li><a href="cheks.html">Check in / Check out</a></li>
+                    <li><a href="decoracion.html">Reformas y Mantenimiento</a></li>
+                    <li><a href="dormitorio.html">Renting ropa de cama</a></li>
+                    <li><a href="toallas.html">Renting toallas</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="informacion.html" class="enlace" style="padding-right: 14px; padding-left: 14px;">Conócenos</a>
+                    <ul class="submenu">
+                        <li><a href="https://www.rentalholidays.es/">Gestión de propiedades</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="reservas.html" class="enlace" style="padding-right: 14px; padding-left: 14px;">Reservas</a>
+                </li>
+                <li>
+                    <img decoding="async" src="media/logo_turisme_cv_gva.png" class="header-logo" style="float: right; width: 280px; height: 57.58px; margin-top: 15px;" alt="Turisme Generalitat Valenciana">
+                </li>
+                </ul>
+            </nav>
             </div>
-        </div>
-
-        <p>
-            Entrega y recogida de llaves presencial en el alojamiento, recogida de déposito de fianza e inspeccion visual del alojamiento y comunicación de incidencias al propietario.
-         </p>
-         <p>Recepcion de huespedes, explicacion sobre el funcionamiento y normas de la vivienda</p>
-         <p>Asistencia 24/7</p>
-        </section>
-        <h2>TARIFAS (+IVA)</h2>
-        <table border="1">
-            <tr>
-                <th>Días</th>
-                <th>Horario</th>
-                <th>Precio</th>
-            </tr>
-            <tr>
-                <td>Lunes a sábado</td>
-                <td>9 a 19.59 hs</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>Domingos y festivos</td>
-                <td>9 a 19.59 hs</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>Lunes a sábado</td>
-                <td>20 a 23.59 hs</td>
-                <td>40</td>
-            </tr>
-            <tr>
-                <td>Domingos y festivos</td>
-                <td>20 a 23.59 hs</td>
-                <td>40</td>
-            </tr>
-            <tr>
-                <td>Lunes a sábado</td>
-                <td>0 a 8:59 hs</td>
-                <td>60</td>
-            </tr>
-            <tr>
-                <td>Domingos y festivos</td>
-                <td>0 a 8:59 hs</td>
-                <td>60</td>
-            </tr>
-            <style>
-                
-                table {
-                    margin-top: 50px;
-                    width: 50%;
-                    margin: auto;
-                    border-collapse: collapse;
-                    background-color: #2db4a7;
-                    font-size: 20px;
-                    color: white;
-                
-                }
-                th, td {
-                    border: 1px solid white;
-                    padding: 10px;
-                    text-align: center;
-                }
-                h2 {
-                    text-align: center;
-                    margin-top: 50px;
-                }
-                p {
-                    margin-top:10px;
-                    text-align: justify;
-                    font-size: 24px;
-                    font-size: 15px;
-                }
-            </style>
-        </table>
-    </main>
-    </div>
-    <style>
-        /* Estilos por defecto para escritorio */
-        .rows {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-            align-items: center;
-            overflow: auto;
-        }
-    
-        .block {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        .image {    
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            box-shadow: 0;
-            transition: box-shadow 1s;
-        }
-    
-        .imageMedia {
-            width: 170px;
-            height: 170px;
-        }
-    
-        .name {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    
-        /* Estilos para dispositivos móviles */
-        @media (max-width: 768px) {
+        </header>
+        <aside>
+            <button class="indice-toggle">&#9776; Índice</button> <!-- Botón para móvil -->
+            <div class="indice-content">
+                <div class="side-divider"></div>
+                <h2>CATEGORÍAS</h2>
+                <ul>
+                    <li><a href="limpieza.html" class="enlace">LIMPIEZA </a></li>
+                    <li><a href="cheks.html" class="enlace">CHECK-IN/CHECK-OUT </a></li>
+                    <li><a href="decoracion.html" class="enlace">REFORMAS Y MANTENIMIENTO </a></li>
+                    <li><a href="dormitorio.html" class="enlace">RENTING ROPA DE CAMA </a></li>
+                    <li><a href="toallas.html" class="enlace">RENTING TOALLAS </a></li>
+                </ul>
+                <div class="top-divider full-width"></div>
+                <h2>DELEGACIONES</h2>
+                <ul>
+                    <li><a href="castellon.html" class="enlace">CASTELLÓN </a></li>
+                    <li><a href="valencia.html" class="enlace">VALENCIA</a></li>
+                    <li><a href="alicante.html" class="enlace">ALICANTE</a></li>
+                    <li><a href="https://www.rentalholidays.es/" class="enlace">GESTIÓN DE PROPIEDADES</a></li>
+                </ul>
+            </div>
+        </aside>
+        <style>
+            /* Estilos por defecto para escritorio */
             .rows {
-                flex-wrap: wrap;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                align-items: center;
+                overflow: auto;
+            }
+        
+            .block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .image {    
+                position: relative;
+                display: flex;
+                align-items: center;
                 justify-content: center;
+                margin: 10px;
+                box-shadow: 0;
+                transition: box-shadow 1s;
             }
-            .block:first-child, .block:nth-child(2), .block:nth-child(3), .block:nth-child(4) {
-                width: 100%;
-            }
-    
-            /* Ajustar el tamaño de la imagen en dispositivos móviles */
+        
             .imageMedia {
-                width: 120px;
-                height: 120px;
+                width: 170px;
+                height: 170px;
             }
-        }
-    </style>
-    
-    
-   
-        </main>
-        <footer>
-            <h2>Redes sociales</h2>
-            <section class="Redes-sociales">
-                <a href="mailto:rentalholidays.es@gmail.com">
-                    <div class="imagen-container">
-                        <img src="media/gmail.png" alt="gmail" class="imagen-normal">
-                        <img src="media/gmailhover.png" alt="gmail hover" class="imagen-hover">
-                    </div>
-                </a>
-                <a href="tel:+34655833488">
-                    <div class="imagen-container">
-                        <img src="media/llamar.png" alt="llamar" class="imagen-normal">
-                        <img src="media/llamarhover.png" alt="llamar hover" class="imagen-hover">
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/rental_holidays/">
-                    <div class="imagen-container">
-                        <img src="media/instagram.png" alt="instagram" class="imagen-normal">
-                        <img src="media/instagramhover.png" alt="instagram hover" class="imagen-hover">
-                    </div>
-                </a>
-                <a href="https://www.facebook.com/rentalholidays">
-                    <div class="imagen-container">
-                        <img src="media/facebook.png" alt="facebook" class="imagen-normal">
-                        <img src="media/facebookhover.png" alt="facebook hover" class="imagen-hover">
-                    </div>
-                </a>
-                <a href="https://www.tiktok.com/@rentalholidays.es">
-                    <div class="imagen-container">
-                        <img src="media/tiktok.png" alt="tiktok" class="imagen-normal">
-                        <img src="media/tiktokhover.png" alt="tiktok hover" class="imagen-hover">
-                    </div>
-                </a>
+        
+            .name {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        
+            /* Estilos para dispositivos móviles */
+            @media (max-width: 768px) {
+                .rows {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .block:first-child, .block:nth-child(2), .block:nth-child(3), .block:nth-child(4) {
+                    width: 100%;
+                }
+        
+                /* Ajustar el tamaño de la imagen en dispositivos móviles */
+                .imageMedia {
+                    width: 120px;
+                    height: 120px;
+                }
+        
+                aside.active {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 80%;
+                    height: 100vh;
+                    background: white;
+                    z-index: 1000;
+                    padding-top: 60px;
+                    overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
+                    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+                }
+        
+                aside.active::-webkit-scrollbar {
+                    width: 8px;
+                }
+        
+                aside.active::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                    border-radius: 4px;
+                }
+        
+                aside.active::-webkit-scrollbar-thumb {
+                    background: #2db4a7;
+                    border-radius: 4px;
+                }
+        
+                aside.active::-webkit-scrollbar-thumb:hover {
+                    background: #239b8f;
+                }
+        
+                .indice-content.active {
+                    display: block;
+                    height: calc(100vh - 80px);
+                    overflow-y: auto;
+                    padding: 20px;
+                }
+            }
+        </style>
+        <main>
+            <div id="content" class="large-9 left col col-divided" role="main"></div>
+            <div class="contenedor">
+                <img src="media/entrega de llaves.png" alt="Recogida de llaves" class="imagenDetalles">
+                <div class="texto">
+                    <h3>Recepcion de huespedes</h3>
+                    <h4 class="categoria">Categoria: 
+                        <a href="cheks.html" class="enlace-main">
+                            Checkin
+                        </a>
+                    </h4>
+                </div>
+            </div>
+
+            <p>
+                Entrega y recogida de llaves presencial en el alojamiento, recogida de déposito de fianza e inspeccion visual del alojamiento y comunicación de incidencias al propietario.
+            </p>
+            <p>Recepcion de huespedes, explicacion sobre el funcionamiento y normas de la vivienda</p>
+            <p>Asistencia 24/7</p>
             </section>
-        </footer>
-            <!-- Botón de WhatsApp -->
-            <a href="https://api.whatsapp.com/send?phone=34655833488&text=Hola!%20" 
-            target="_blank" 
-            class="whatsapp-button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
-            </a>
-            
-            <!-- Estilos CSS para el botón -->
-            <style>
-            .whatsapp-button {
-             position: fixed;
-             bottom: 20px;
-             right: 20px;
-             z-index: 1000;
-             background-color: #25D366; /* Color de WhatsApp */
-             border-radius: 50%;
-             padding: 10px;
-             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-             transition: background-color 0.3s ease;
+            <h2>TARIFAS (+IVA)</h2>
+            <table border="1">
+                <tr>
+                    <th>Días</th>
+                    <th>Horario</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Lunes a sábado</td>
+                    <td>9 a 19.59 hs</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Domingos y festivos</td>
+                    <td>9 a 19.59 hs</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Lunes a sábado</td>
+                    <td>20 a 23.59 hs</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Domingos y festivos</td>
+                    <td>20 a 23.59 hs</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Lunes a sábado</td>
+                    <td>0 a 8:59 hs</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Domingos y festivos</td>
+                    <td>0 a 8:59 hs</td>
+                    <td>60</td>
+                </tr>
+                <style>
+                    
+                    table {
+                        margin-top: 50px;
+                        width: 50%;
+                        margin: auto;
+                        border-collapse: collapse;
+                        background-color: #2db4a7;
+                        font-size: 20px;
+                        color: white;
+                    
+                    }
+                    th, td {
+                        border: 1px solid white;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                    h2 {
+                        text-align: center;
+                        margin-top: 50px;
+                    }
+                    p {
+                        margin-top:10px;
+                        text-align: justify;
+                        font-size: 24px;
+                        font-size: 15px;
+                    }
+                </style>
+            </table>
+        </main>
+        </div>
+        <style>
+            /* Estilos por defecto para escritorio */
+            .rows {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                align-items: center;
+                overflow: auto;
             }
-            
-            .whatsapp-button:hover {
-             background-color: #128C7E; /* Color de WhatsApp al pasar el mouse */
+        
+            .block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
-            
-            .whatsapp-button img {
-             display: block;
+        
+            .image {    
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+                box-shadow: 0;
+                transition: box-shadow 1s;
             }
-            </style>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const menuToggle = document.createElement('button');
-                    menuToggle.innerHTML = '&#9776;';
-                    menuToggle.className = 'menu-toggle';
-                    document.querySelector('.header-content').appendChild(menuToggle);
-            
-                    menuToggle.addEventListener('click', function() {
-                        const nav = document.querySelector('nav ul');
-                        nav.classList.toggle('active');
-                    });
-                });
-            </script>
-             <script>
-             document.addEventListener('DOMContentLoaded', function() {
-        // Botón de índice para el aside
-        const indiceToggle = document.querySelector('.indice-toggle');
-        const indiceContent = document.querySelector('.indice-content');
+        
+            .imageMedia {
+                width: 170px;
+                height: 170px;
+            }
+        
+            .name {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        
+            /* Estilos para dispositivos móviles */
+            @media (max-width: 768px) {
+                .rows {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .block:first-child, .block:nth-child(2), .block:nth-child(3), .block:nth-child(4) {
+                    width: 100%;
+                }
+        
+                /* Ajustar el tamaño de la imagen en dispositivos móviles */
+                .imageMedia {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        </style>
+        
+        
     
-        if (indiceToggle && indiceContent) {
-            indiceToggle.addEventListener('click', function() {
-                console.log("Botón de índice clickeado"); // Debug
-                indiceContent.classList.toggle('active');
-            });
-        }
-    });
-            </script>
-            
+            </main>
+            <footer>
+                <h2>Redes sociales</h2>
+                <section class="Redes-sociales">
+                    <a href="mailto:rentalholidays.es@gmail.com">
+                        <div class="imagen-container">
+                            <img src="media/gmail.png" alt="gmail" class="imagen-normal">
+                            <img src="media/gmailhover.png" alt="gmail hover" class="imagen-hover">
+                        </div>
+                    </a>
+                    <a href="tel:+34655833488">
+                        <div class="imagen-container">
+                            <img src="media/llamar.png" alt="llamar" class="imagen-normal">
+                            <img src="media/llamarhover.png" alt="llamar hover" class="imagen-hover">
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/rental_holidays/">
+                        <div class="imagen-container">
+                            <img src="media/instagram.png" alt="instagram" class="imagen-normal">
+                            <img src="media/instagramhover.png" alt="instagram hover" class="imagen-hover">
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/rentalholidays">
+                        <div class="imagen-container">
+                            <img src="media/facebook.png" alt="facebook" class="imagen-normal">
+                            <img src="media/facebookhover.png" alt="facebook hover" class="imagen-hover">
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@rentalholidays.es">
+                        <div class="imagen-container">
+                            <img src="media/tiktok.png" alt="tiktok" class="imagen-normal">
+                            <img src="media/tiktokhover.png" alt="tiktok hover" class="imagen-hover">
+                        </div>
+                    </a>
+                </section>
+            </footer>
+                <!-- Botón de WhatsApp -->
+                <a href="https://api.whatsapp.com/send?phone=34655833488&text=Hola!%20" 
+                target="_blank" 
+                class="whatsapp-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
+                </a>
+                
+                <!-- Estilos CSS para el botón -->
+                <style>
+                .whatsapp-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+                background-color: #25D366; /* Color de WhatsApp */
+                border-radius: 50%;
+                padding: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s ease;
+                }
+                
+                .whatsapp-button:hover {
+                background-color: #128C7E; /* Color de WhatsApp al pasar el mouse */
+                }
+                
+                .whatsapp-button img {
+                display: block;
+                }
+                </style>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const menuToggle = document.createElement('button');
+                        menuToggle.innerHTML = '&#9776;';
+                        menuToggle.className = 'menu-toggle';
+                        document.querySelector('.header-content').appendChild(menuToggle);
+                
+                        menuToggle.addEventListener('click', function() {
+                            const nav = document.querySelector('nav ul');
+                            nav.classList.toggle('active');
+                        });
+                    });
+                </script>
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+            // Botón de índice para el aside
+            const indiceToggle = document.querySelector('.indice-toggle');
+            const indiceContent = document.querySelector('.indice-content');
+        
+            if (indiceToggle && indiceContent) {
+                indiceToggle.addEventListener('click', function() {
+                    console.log("Botón de índice clickeado"); // Debug
+                    indiceContent.classList.toggle('active');
+                });
+            }
+        });
+                </script>
+        </div>      
     </body>
 </html>

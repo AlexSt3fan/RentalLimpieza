@@ -449,46 +449,75 @@ main h2 {
 .hidden {
     display: list-item;
     text-align: center;
-    margin-left: 0px;
-    width:777px;
+    margin: 0 0;
+    width: 100%;
+    max-width: 777px;
     height: 40px;
     font-size: 18px;
     color: rgb(0, 0, 0);
     background-color: white;
-    border-color: rgb(196, 51, 51);
-    border-width: 2px;
+    border: 2px solid rgb(196, 51, 51);
+    border-radius: 40px;
 }
-.hidden2{
-    border-width: 2px;
-    border-color: rgb(196, 51, 51);
-    border-style: solid;
+
+.hidden2 {
+    border: 2px solid rgb(196, 51, 51);
+    border-radius: 40px;
+    padding: 10px;
 }
 
 /* Animación para hacer que la sección parpadee */
 @keyframes parpadeo {
-    0% { background-color: #ffcccc; } /* Color inicial (puedes cambiarlo) */
-    50% { background-color: #ff6666; } /* Color cuando parpadea */
-    100% { background-color: #ffcccc; } /* Vuelve al color original */
+    0% { background-color: #ffcccc; }
+    50% { background-color: #ff6666; }
+    100% { background-color: #ffcccc; }
 }
 
 .parpadeo {
-    animation: parpadeo 1s ease-in-out 1; /* Parpadeo que se repite 1 vez */
+    animation: parpadeo 1s ease-in-out 1;
 }
 
-
-Pd: en "valencia" los iconos le faltan el media/
-
+#miTextarea, 
+#miTextarea2, 
+#miTextarea2-email {
+    width: 100%;
+    max-width: 777px;
+    padding: 10px;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+}
 
 #miTextarea {
-    height: 183px;
-    width: 769px;
-    resize: none;
-    padding: 8px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    border: 1px solid #3d3d3d;
-    border-radius: 4px;
+    height: 100px;
 }
+
+#miTextarea2, 
+#miTextarea2-email {
+    height: 50px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .hidden, 
+    #miTextarea, 
+    #miTextarea2, 
+    #miTextarea2-email {
+        max-width: 90%;
+        font-size: 16px;
+    }
+
+    #miTextarea {
+        height: 80px;
+    }
+
+    #miTextarea2, 
+    #miTextarea2-email {
+        height: 45px;
+    }
+}
+
+
 
 .rellenar {
     margin-left: 0px;

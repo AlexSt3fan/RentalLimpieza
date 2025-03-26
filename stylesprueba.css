@@ -8,7 +8,7 @@ html, body {
 }
 /* ... existing CSS code ... */
 
-/* Add these new styles for the calculator */
+/*ESTILO DEL SIMULADOR DE PRESUPUESTO---------------------------------------------------------------*/
 .slider-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -39,23 +39,6 @@ html, body {
     gap: 10px;
 }
 
-.grid_prueba{
-    background-size: 100%;
-    background-position: center;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%), url('media/Fondo.jpg');
-    position: absolute;
-    height: 800px;
-    width: 100%;
-    color: white; /* Asegúrate de que el texto sea legible */
-    z-index: -1;
-
-}
-
-.productos-destacados h2 {
-    font-size:  28px;
-    margin-top: 150px; /* Ajusta el valor según el espacio que desees */
-}
-
 input[type="range"] {
     flex: 1;
 }
@@ -77,7 +60,7 @@ input[type="range"] {
     border: 1px solid #4CAF50;
 }
 
-/* Add styles for results section */
+
 .resultados {
     margin-top: 20px;
     padding: 20px;
@@ -94,12 +77,33 @@ input[type="range"] {
     cursor: pointer;
 }
 
-/* ... rest of your existing CSS code ... */
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/*IMAGEN DE FONDO---------------------------------------------------------------------------------------------------------------*/
+.grid_prueba {
+    background-size: 100%; /* Se asegura de cubrir el contenedor manteniendo el aspect ratio */
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%), url('media/Fondo.jpg');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: white; /* Asegúrate de que el texto sea legible */
+    z-index: -1;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+.productos-destacados h2 {
+    font-size:large;
+    margin-top: 150px; /* Ajusta el valor según el espacio que desees */
+}
+
 body {
     display: flex;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
-    font-size:15px;
+    font-size: medium;
 }
 main {
     flex: 1 0 auto;
@@ -109,13 +113,13 @@ main {
 
 p1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: medium;
     font-weight: bold;
     color: #626262;
 }
 
 .titulo-subrayado{
-    font-size: 50px; /* Tamaño de la fuente */
+    font-size: larger; /* Tamaño de la fuente */
             color: #2db4a7; /* Color del texto */
             text-shadow: 
                 2px 2px 0px whitesmoke,   /* Borde negro a la derecha y abajo */
@@ -130,7 +134,7 @@ p1 {
 
 p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+    font-size: medium;
     color: rgb(0, 0, 0);
 }
 
@@ -149,7 +153,7 @@ header {
 .header-content img{
     max-width: 350px;
     max-height: 89px;
-    margin-right: 80px;
+    margin-right: 60px;
     vertical-align:middle;
 }
 
@@ -170,9 +174,6 @@ h3 {
     font-size: medium;
 }
 
-a.header-content:hover {
-    background-color: red;
-}
 
 a.enlace {
     color:#474747; /* Color del texto */
@@ -260,14 +261,14 @@ h4 {
     font-size: small;
 }
 aside {
-    width: 20%;
+    width: 30%;
     color: #2db4a7;
     position: fixed; /* Posición fija */
     list-style: none;
     margin-top: 180px;
     margin-left: 100px;
     z-index: 100;
-    font-size:medium;
+    font-size: medium;
     height: 480px;
 }
 .indice-content {
@@ -951,9 +952,7 @@ p {
 
 /* Pantalla completa (1920px y superior) */
 @media screen and (min-width: 1920px) {
-    body {
-        margin-left: 10%;
-    }
+   
 
     .menu-toggle,
     .indice-toggle {
@@ -965,19 +964,17 @@ p {
         display: block;
     }
 
-    header {
-        left: 22%;
-    }
+  
 
     aside {
-        width: 20%;
-        margin-left: 230px;
+        width: 100%;
+        margin-left: 130px;
         position: fixed;
     }
 
     main {
-        width: 50%;
-        margin-left: 500px;
+        width:100%;
+        margin-left: 200px;
     }
 
     .grid-castellon,
@@ -1241,41 +1238,7 @@ p {
 
 
 /* Pantalla completa (1920px y superior) */
-@media screen and (min-width: 1920px) {
-    body {
-        margin-left: 10%;
-    }
 
-    .menu-toggle,
-    .indice-toggle {
-        display: none;
-    }
-
-    .header-links,
-    .indice-content {
-        display: block;
-    }
-
-    header {
-        left: 22%;
-    }
-
-    aside {
-        width: 20%;
-        margin-left: 230px;
-        position: fixed;
-    }
-
-    main {
-        width: 50%;
-        margin-left: 500px;
-    }
-
-    .grid-castellon,
-    .grid-alicante {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
 aside {
     font-family: 'Open Sans', sans-serif;
@@ -1425,6 +1388,10 @@ max-height: calc(100vh - 180px);
 scrollbar-width: thin;
 scrollbar-color: #2db4a7 #f1f1f1;
 transition: overflow 0.3s ease-in-out; /* Suaviza el efecto */
+direction: rtl; /* Invierte la dirección del contenido */
+}
+.indice-content{
+    direction: ltr; /* Restaura la dirección normal del texto dentro del índice */
 }
 
 aside:hover {
@@ -1450,6 +1417,149 @@ aside::-webkit-scrollbar-thumb:hover {
 background: #239b8f;
 }
 
+
 footer{
     background-color: rgb(250, 250, 250)
 }
+/* ===========================
+   Estilos Base
+   =========================== */
+   html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .layout-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+  }
+  
+  /* ===========================
+     📌 Tablets, Móviles y Dispositivos Pequeños (hasta 1023px)
+     =========================== */
+  @media (max-width: 1023px) {
+    .layout-container {
+      max-width: 100%;
+      padding: 0 2%;
+    }
+  
+    aside, main {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    aside {
+      margin-top: 20px;
+    }
+  
+    main {
+      margin-top: 20px;
+      padding: 0 5%;
+    }
+  
+    /* Índice ocupa todo el ancho en móviles */
+    .indice-content {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem; /* Tamaño de fuente estándar */
+    }
+  
+    .grid-castellon,
+    .grid-alicante {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+  
+  /* ===========================
+     📌 Portátiles y Escritorios (1024px en adelante)
+     =========================== */
+  @media (min-width: 1024px) {
+    .layout-container {
+      max-width: 1920px;
+    }
+  
+    aside {
+      position: fixed;
+      width: 28%;
+      top: 30px;
+      left: 0;
+    }
+  
+    main {
+      position: relative;
+      width: 60%;
+      margin-top: 130px;
+      margin-left: calc(28% + 45px);
+    }
+  
+    /* Ajuste de tamaño para el índice */
+    .indice-content {
+      width: 90%; /* Más grande en portátiles */
+      padding: 20px;
+      font-size: 1.1rem;
+    }
+  
+    /* Ajuste para portátiles (1024px - 1440px) */
+    @media (max-width: 1440px) {
+      .layout-container {
+        max-width: 1440px;
+      }
+  
+      aside {
+        width: 28%;
+        left: 0;
+      }
+  
+      main {
+        width: 60%;
+        margin-left: calc(28% + 45px);
+      }
+  
+      .indice-content {
+        width: 95%;
+        font-size: 1.2rem; /* Ligera mejora en texto */
+      }
+    }
+  
+    /* Ajuste para Escritorios Grandes (1441px en adelante) */
+    @media (min-width: 1441px) {
+      aside {
+        width: 30%;
+        left: 0;
+          }
+  
+      main {
+        width: 60%;
+        margin-left: calc(32% + 45px);
+      }
+  
+      .indice-content {
+        width: 100%; /* Ocupa más espacio */
+        font-size: 1.4rem; /* Texto más grande */
+        padding: 25px;
+      }
+    }
+
+    @media (min-width: 1920px) {
+        .logo{
+            margin-right: 14%;
+        }
+        
+    }
+    
+    /* Se mantiene la organización en `grid` */
+    .grid-castellon,
+    .grid-alicante {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }

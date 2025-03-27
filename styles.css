@@ -778,8 +778,7 @@ p {
         top: 60px;
         left: 0;
         right: 0;
-        width: 90%;
-        max-width: 350px;
+        max-width: 60%;
         margin: 0 auto;
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -800,13 +799,16 @@ p {
         left: 0;
         right: 0;
         width: 90%;
-        max-width: 350px;
+        max-width: 60%;
         margin: 0 auto;
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 1001;
         padding: 15px;
         border-radius: 10px;
+    }
+    .indice-content h2 {
+        font-size: 20px;
     }
 
     .header-links.active,
@@ -825,12 +827,11 @@ p {
         margin-left: 15px;
         margin-right: 15px;
     }
-}
-}
-    .consultarProd {
-        width: 100%;
-        font-size: 16px;
+    .header-logo{
+        width: 280px;
     }
+}
+}
     footer .grid-contenedor {
         flex-direction: column;
         gap: 20px;
@@ -1056,30 +1057,35 @@ p {
 
 
 
-/* Media query para móviles */
+/*------------------------------------------------------- Media query para móviles -------------------------------------------------------------------------------*/
 @media (max-width: 768px) {
         .menu-toggle {
-        display: flex;
+        position: fixed;
         align-items: center;
         justify-content: center;
         top: 10px;
         left: 10px;
+        z-index: 1001;
+    }
+    .header-links.active {
+        z-index: 1001;
     }
     .indice-toggle {
         position: fixed;
         top: 10px;
         left: 60px;
         z-index: 1001;
+        max-width: 80%;
     }
-        .header-links.active,
+        
         .indice-content.active {
             display: flex;
             flex-direction: column;
             position: fixed;
             top: 60px;
-            left: 0;
-            width: 250px;
-            height: auto;
+            margin-right: 11%;
+            max-width: 80%;
+            max-height: 400px;
             background-color: white;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
             z-index: 1001;
@@ -1113,11 +1119,7 @@ p {
     main {
         margin-top: 70px;
     }
-    .añadirCesta,
-    .consultarProd {
-        width: 100%;
-        font-size: 16px;
-    }
+    
     footer .grid-contenedor {
         flex-direction: column;
         gap: 20px;
@@ -1474,62 +1476,150 @@ footer{
     background-color: rgb(250, 250, 250)
 }
 /* ===========================
-   Estilos Base
+   📌 Estilos Base
    =========================== */
-   html, body {
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-  }
-  
-  .layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.layout-container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 0;
-  }
-  
-  /* ===========================
-     📌 Tablets, Móviles y Dispositivos Pequeños (hasta 1023px)
-     =========================== */
-  @media (max-width: 1023px) {
+    padding: 0;
+    max-width: 1920px;
+    flex: 1;
+}
+
+footer {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* ===========================
+   📌 Dispositivos Pequeños (Móviles y Tablets)
+   =========================== */
+@media (max-width: 1023px) {
     .layout-container {
-      max-width: 100%;
-      padding: 0 2%;
+        max-width: 100%;
+        padding: 0 5%;
     }
-  
-    aside, main {
-      position: relative;
-      width: 100%;
-      margin: 0 auto;
-    }
-  
-    aside {
-      margin-top: 20px;
-    }
-  
+
     main {
-      margin-top: 20px;
-      padding: 0 5%;
+        width: 100%;
+        margin: 0 0;
+        position: relative;
     }
-  
-    /* Índice ocupa todo el ancho en móviles */
+
+    aside {
+        width: 0;
+        height: 0;
+    }
+
+    main {
+        padding: 0 5%;
+    }
+
+    .titulo-subrayado {
+        font-size: 45px;
+    }
+
     .indice-content {
-      width: 100%;
-      padding: 10px;
-      font-size: 1rem; /* Tamaño de fuente estándar */
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
     }
-  
+
     .grid-castellon,
     .grid-alicante {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
-  }
-  
+
+    /* Ajuste de menú en móviles */
+    .menu-toggle, .indice-toggle {
+        position: fixed;
+        top: 10px;
+        z-index: 1001;
+    }
+
+    .menu-toggle {
+        left: 10px;
+    }
+
+    .indice-toggle {
+        left: 60px;
+        max-width: 80%;
+    }
+
+    .indice-content.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        max-width: 80%;
+        max-height: 400px;
+        background-color: white;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .header-links li, .indice-content li {
+        padding: 15px;
+        margin: 5px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .header-links a, .indice-content a {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .header-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        max-width: 80%;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .whatsapp-button {
+        bottom: 80px !important;
+        right: 15px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .header-logo {
+        width: 250px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #f1f1f1;
+        margin-top: 20px;
+    }
+}
   /* ===========================
      📌 Portátiles y Escritorios (1024px en adelante)
      =========================== */

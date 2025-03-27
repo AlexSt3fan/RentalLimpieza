@@ -808,32 +808,46 @@
                  display: block;
                 }
                 </style>
+                 <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    const menuToggle = document.createElement('button');
+                    menuToggle.innerHTML = '&#9776;'; 
+                    menuToggle.className = 'menu-toggle';
+                    document.querySelector('.header-content').appendChild(menuToggle);
+
+                    menuToggle.addEventListener('click', function() {
+                        const nav = document.querySelector('nav ul');
+                        
+                        // Si el índice está abierto, cerramos su clase active
+                        const indiceContent = document.querySelector('.indice-content');
+                        if (indiceContent.classList.contains('active')) {
+                            indiceContent.classList.remove('active');
+                        }
+
+                        // Alterna la clase active para el menú
+                        nav.classList.toggle('active');
+                    });
+                });
+
+                </script>
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
-                        const menuToggle = document.createElement('button');
-                        menuToggle.innerHTML = '&#9776;';
-                        menuToggle.className = 'menu-toggle';
-                        document.querySelector('.header-content').appendChild(menuToggle);
-                
-                        menuToggle.addEventListener('click', function() {
+                    const indiceToggle = document.querySelector('.indice-toggle');
+                    const indiceContent = document.querySelector('.indice-content');
+
+                    if (indiceToggle && indiceContent) {
+                        indiceToggle.addEventListener('click', function() {
+                            // Si el menú está abierto, lo cerramos
                             const nav = document.querySelector('nav ul');
-                            nav.classList.toggle('active');
+                            if (nav.classList.contains('active')) {
+                                nav.classList.remove('active');
+                            }
+
+                            // Alterna la clase active para el índice
+                            indiceContent.classList.toggle('active');
                         });
+                    }
                     });
-                </script>
-                 <script>
-                 document.addEventListener('DOMContentLoaded', function() {
-            // Botón de índice para el aside
-            const indiceToggle = document.querySelector('.indice-toggle');
-            const indiceContent = document.querySelector('.indice-content');
-        
-            if (indiceToggle && indiceContent) {
-                indiceToggle.addEventListener('click', function() {
-                    console.log("Botón de índice clickeado"); // Debug
-                    indiceContent.classList.toggle('active');
-                });
-            }
-        });
                 </script>
                 
         </body>

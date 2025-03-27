@@ -418,17 +418,6 @@ main h2 {
 }
 
 .consultarProd {
-    width: 200px;
-    height: 40px;
-    font-size: 10px;
-    font-family: 'Open Sans', sans-serif;
-    border: 1px solid ;
-    border-color: #2db4a7;
-    border-radius: 20px;
-    background-color: #2db4a7;
-    color:white;
-}
-.consultarProd-limpieza-empresa {
     width: 675px;
     height: 40px;
     font-size: 20px;

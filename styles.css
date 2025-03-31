@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 html, body {
     min-height: 100vh;
     margin: 0;
@@ -210,21 +212,33 @@ a.enlace-main {
     text-decoration: none; /* Elimina el subrayado por defecto */ 
     position: relative; /* Necesario para el pseudo-elemento */
     display: inline-block; /* Asegura que el subrayado no ocupe toda la línea */
+    border: 2px solid;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 2px 2px 2px 0 #2db4a7d4;
 }
 
 a.enlace-main::after {
     content: ''; /* Necesario para que el pseudo-elemento funcione */
     position: absolute;
     left: 0;
-    bottom: -2px; /* Ajusta la posición del subrayado */
+    bottom: 0px; /* Ajusta la posición del subrayado */
     width: 0; /* Inicia sin ancho */
-    height: 2px; /* Grosor de la línea */
+    height: 100%; /* Grosor de la línea */
     background: red; /* Color de la línea */
     transition: width 0.2s ease; /* Animación de izquierda a derecha */
+    z-index: -1;
+    border-radius: 20px;
 }
 
 a.enlace-main:hover::after {
     width: 100%; /* La línea se expande hasta el 100% del ancho del texto */
+    box-shadow: 2px 2px 2px 0 rgb(232, 0, 0);
+}
+
+a.enlace-main:hover{
+    color: white;
 }
 
 nav ul {
@@ -428,6 +442,7 @@ main h2 {
     background-color: #2db4a7;
     color:white;
     margin-top: 20px;
+    box-shadow: 2px 2px 4px 0 #2db4a7d4;
 }
 .consultarProd-limpieza-empresa {
     width: 743px;
@@ -440,6 +455,7 @@ main h2 {
     background-color: #2db4a7;
     color:white;
     margin-top: 20px;
+    box-shadow: 2px 2px 4px 0 #2db4a7d4;
 }
 .consultarProd:hover {
     border-color: #2db4a7;
@@ -1366,8 +1382,6 @@ li {
     border-color: #000000;
 }
 
-/* 1. Importa la fuente Open Sans (o la que prefieras) */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
   
 /* 2. Definir la animación de aparición (fade + scale) */
 @keyframes fadeInScale {
@@ -1749,5 +1763,15 @@ footer {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+    }
+  }
+
+  @media(max-width:500px){
+    .grid-text{
+        text-align: center;
+    }
+
+    .grid-texto{
+        text-align: center;
     }
   }

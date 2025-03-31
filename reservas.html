@@ -183,11 +183,15 @@
     </style>
     <main>
         <div id="content" class="large-9 left col col-divided" role="main"></div>
-        <h1 style="margin-left: -80px;">GESTIONA TU RESERVA</h1>
-        <p1>Elige los productos que deseas contratar y completa los campos para obtener un presupuesto aproximado.</p1>
+        <div class="grupo-tituloreservas">
+            <h1 class="titulo-reservas"">GESTIONA TU RESERVA</h1>
+            <br>
+            <p1>Elige los productos que deseas contratar y completa los campos para obtener un presupuesto aproximado.</p1>
+            <br>
+        </div>
         <ul>
         <section class="productos-seleccionados">
-            <h2 style="margin-left: -100px;">Servicios de limpieza a contratar</h2>
+            <h2 class="subtitulo-reservas">Servicios de limpieza a contratar</h2>
             <br>
                 <section id="servicios-section">
                     <h3>¿Qué servicio quieres contratar?(*)</h3>
@@ -254,7 +258,7 @@
                             <h3>¿Vives con algun animal?</h3>
                             <textarea id="miTextarea2" name="animal" placeholder="Escribe aquí..." style="border-width: 2px;"></textarea>
                         </section>
-                    </section>
+                    
 
                     <!-- Sección de Nombre & Apellidos -->
                     <section id="servicios-section">
@@ -427,7 +431,7 @@
                     
                     <!-- Modificar los botones -->
                     <section id="servicios-section" style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 20px;">
-                        <button onclick="enviarEmail()" class="consultarProd" style="width: 200px;margin-left: -110px;">Enviar por Email</button>
+                        <button onclick="enviarEmail()" class="consultarProd botonMail" style="width: 200px; margin-left: -60px;">Enviar por Email</button>
                         <button onclick="enviarWhatsApp()" class="consultarProd" style="width: 200px;">Enviar por WhatsApp</button>
                     </section>
                 </div>

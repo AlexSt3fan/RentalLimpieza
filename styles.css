@@ -418,8 +418,8 @@ main h2 {
 }
 
 .consultarProd {
-    width: 675px;
-    height: 40px;
+    width: 743px;
+    height: 44px;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     border: 1px solid ;
@@ -430,8 +430,8 @@ main h2 {
     margin-top: 20px;
 }
 .consultarProd-limpieza-empresa {
-    width: 675px;
-    height: 40px;
+    width: 743px;
+    height: 44px;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     border: 1px solid ;
@@ -1529,7 +1529,7 @@ footer {
         width: 0;
         height: 0;
     }
-
+    
     main {
         padding: 0 5%;
     }
@@ -1537,6 +1537,8 @@ footer {
     .titulo-subrayado {
         font-size: 45px;
     }
+
+    
 
     .indice-content {
         width: 100%;
@@ -1674,6 +1676,13 @@ footer {
         width: 28%;
         left: 0;
       }
+      .titulo-reservas{
+        margin-left: -80px;
+    }
+
+    .subtitulo-reservas{
+            margin-left: -100px;
+    }
   
       main {
         width: 60%;
@@ -1685,6 +1694,7 @@ footer {
         font-size: 1.2rem; /* Ligera mejora en texto */
       }
     }
+    
   
     /* Ajuste para Escritorios Grandes (1441px en adelante) */
     @media (min-width: 1441px) {
@@ -1709,6 +1719,28 @@ footer {
         .logo{
             margin-right: 14%;
         }
+
+        .titulo-reservas{
+            margin-left: -8%;
+        }
+    
+        .subtitulo-reservas{
+            margin-left: -18%;
+        }
+
+        .productos-seleccionados{
+            margin-left: 15%;
+        }
+
+        .grupo-tituloreservas{
+            margin-left: 8%;
+        }
+
+        .grupo-tituloreservas p1{
+            font-size: 20px;
+            ;
+        }
+        
     }
     
     /* Se mantiene la organización en `grid` */

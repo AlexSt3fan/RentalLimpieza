@@ -193,18 +193,19 @@
         <section class="productos-seleccionados">
             <h2 class="subtitulo-reservas">Servicios de limpieza a contratar</h2>
             <br>
-                <section id="servicios-section">
-                    <h3>¿Qué servicio quieres contratar?(*)</h3>
-                    <select name="servicio" class="hidden">
-                        <option value="1semana">1 vez a la semana (18€ + IVA)</option>
-                        <option value="2semanas">1 vez cada dos semanas (20€ + IVA)</option>
-                        <option value="Limpieza-puntual">Limpieza puntual (23€ + IVA)</option>
-                        <option value="Limpieza profunda">Limpieza profunda (30€+IVA)</option>
-                        <option value="2*semana">2 veces a la semana (28€ + IVA)</option>
-                        <option value="Limpieza periodica">Resto a consultar por WhatsApp</option>
-                    </select>
-                </section>
+                
                 <div class="grid-container">
+                    <section id="servicios-section">
+                        <h3>¿Qué servicio quieres contratar?(*)</h3>
+                        <select name="servicio" class="hidden">
+                            <option value="1semana">1 vez a la semana (18€ + IVA)</option>
+                            <option value="2semanas">1 vez cada dos semanas (20€ + IVA)</option>
+                            <option value="Limpieza-puntual">Limpieza puntual (23€ + IVA)</option>
+                            <option value="Limpieza profunda">Limpieza profunda (30€+IVA)</option>
+                            <option value="2*semana">2 veces a la semana (28€ + IVA)</option>
+                            <option value="Limpieza periodica">Resto a consultar por WhatsApp</option>
+                        </select>
+                    </section>
                         <!-- Selección de horas -->
                         <section id="servicios-section">
                             <h3>¿Cuántas horas nos necesitas?(*)</h3>
@@ -432,7 +433,7 @@
                     <!-- Modificar los botones -->
                     <section id="servicios-section" style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 20px;">
                         <button onclick="enviarEmail()" class="consultarProd botonesreservas" style="width: 200px; margin-left: -60px;">Enviar por Email</button>
-                        <button onclick="enviarWhatsApp()" class="consultarProd botonesreservas" style="width: 200px;">Enviar por WhatsApp</button>
+                        <button onclick="enviarWhatsApp()" class="consultarProd botonesreservas botonMail" style="width: 200px;">Enviar por WhatsApp</button>
                     </section>
                 </div>
             </ul>
@@ -479,7 +480,10 @@
         }
     
         /* Estilos para dispositivos móviles */
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
+            main {
+            padding: 0 0;
+            }
             .rows {
                 flex-wrap: wrap;
                 justify-content: center;

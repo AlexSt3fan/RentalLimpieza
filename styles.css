@@ -780,7 +780,7 @@ p {
     }
 
     main {
-        width: 95%;
+        width: 100%;
         padding: 0 10px;
         box-sizing: border-box;
     }
@@ -1073,7 +1073,7 @@ p {
 
 
 /*------------------------------------------------------- Media query para móviles -------------------------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
         .menu-toggle {
         position: fixed;
         align-items: center;
@@ -1092,7 +1092,9 @@ p {
         z-index: 1001;
         max-width: 80%;
     }
-        
+    main {
+        padding: 0 5%;
+    }
         .indice-content.active {
             display: flex;
             flex-direction: column;
@@ -1128,7 +1130,6 @@ p {
             display: block;
             padding: 5px 0;
         }
-        
     }
     aside {
         margin-top: 70px;
@@ -1223,12 +1224,6 @@ p {
 
 /* Móviles grandes (iPhone XR, Samsung S20) */
 @media screen and (max-width: 414px) {
-    .whatsapp-button {
-        bottom: 90px !important;
-        right: 10px !important;
-        width: 45px !important;
-        height: 45px !important;
-    }
     .header-content img {
         max-width: 200px;
     }
@@ -1249,6 +1244,10 @@ p {
     .grid-item-castellon,
     .grid-item-alicante {
         width: 100%;
+    }
+
+    main {
+        padding: 0 5%;
     }
 }
 
@@ -1533,6 +1532,10 @@ footer {
         padding: 0 5%;
     }
 
+    .slider-label{
+        text-align: left;
+    }
+
     main {
         width: 100%;
         margin: 0 0;
@@ -1542,10 +1545,6 @@ footer {
     aside {
         width: 0;
         height: 0;
-    }
-
-    main {
-        padding: 0 5%;
     }
 
     .titulo-subrayado {
@@ -1623,8 +1622,8 @@ footer {
     .whatsapp-button {
         bottom: 80px !important;
         right: 15px !important;
-        width: 50px !important;
-        height: 50px !important;
+        width: 70px !important;
+        height: 70px !important;
     }
 
     .header-logo {
@@ -1716,6 +1715,14 @@ footer {
         float: right;
       }
 
+      .titulo-reservas{
+        margin-right: 10%;
+      }
+
+      .subtitulo-reservas{
+        margin-right: 10%;
+      }
+
       .indice-content {
         width: 100%; /* Ocupa más espacio */
         font-size: 1.4rem; /* Texto más grande */
@@ -1726,6 +1733,28 @@ footer {
     @media (min-width: 1920px) {
         .logo{
             margin-right: 14%;
+        }
+
+        .productos-seleccionados{
+            margin-left: 15%;
+        }
+
+        .botonesreservas{
+            margin-left: -50%;
+        }
+        .botonMail{
+            margin-right: 15%;
+        }
+        .grupo-tituloreservas{
+            margin-left: 15%;
+        }
+
+        .titulo-reservas{
+            margin-right: 15%;
+        }
+
+        .subtitulo-reservas{
+            margin-right: 15%;
         }
     }
     
@@ -1778,6 +1807,10 @@ footer {
         margin-left: 100px;
         margin-right: 100px;
       }
+
+      main {
+        padding: 0 5%;
+    }
   }
 
   @media (min-width:820px) and (max-width:1023px) {
@@ -1814,11 +1847,11 @@ footer {
         margin-right: 60px;
       }
 
-    .whatsapp-button {
-        bottom: 80px !important; /* Aumentamos la distancia desde abajo */
-        right: 15px !important; /* Ajustamos la distancia desde la derecha */
-        width: 50px !important;
-        height: 50px !important;
+      .whatsapp-button {
+        bottom: 80px !important;
+        right: 15px !important;
+        width: 70px !important;
+        height: 70px !important;
     }
 
     .indice-content {
@@ -1877,6 +1910,9 @@ footer {
         width: 280px;
     }
     
+    main {
+        padding: 0 5.5%;
+    }
   }
 
   @media (min-width:1024px) and (max-width:1100px) {
@@ -1913,10 +1949,10 @@ footer {
     }
 
     .whatsapp-button {
-        bottom: 80px !important; 
+        bottom: 80px !important;
         right: 15px !important;
-        width: 50px !important;
-        height: 50px !important;
+        width: 70px !important;
+        height: 70px !important;
     }
 
     .indice-content {
@@ -2054,6 +2090,10 @@ footer {
 
     .header-logo{
         margin-left: 60px;
+    }
+
+    .grupo-tituloreservas{
+        margin-left: 4%;
     }
   }
   

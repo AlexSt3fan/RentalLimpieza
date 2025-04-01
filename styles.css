@@ -2033,6 +2033,14 @@ footer {
     .logogva{
         margin-left: 55px;
     }
+
+    .grid-text{
+        text-align: center;
+    }
+
+    .grid-texto{
+        text-align: center;
+    }
   }
 
   @media (max-width: 767px){

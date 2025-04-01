@@ -723,9 +723,7 @@ footer .grid-objeto-tiktok:hover img:last-child {
 /* Media Queries para Responsive Design */
 /* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
-    body {
-        margin-left: 5%;
-    }
+
 /* Ajustes base para imágenes y texto */
 img {
     max-width: 100%;
@@ -1665,9 +1663,7 @@ footer {
       top: 30px;
       left: 0;
     }
-  .logogva{
-    float: right;
-  }
+
     main {
       position: relative;
       width: 60%;
@@ -1742,13 +1738,314 @@ footer {
     }
   }
 
-  @media (min-width:678px) and (max-width: 912px){
+  @media (min-width:768px) and (max-width: 912px){
     .indice-toggle{
         max-width: 90%;
     }
+    .grid-text{
+        text-align: center;
+    }
 
-    
+    .grid-texto{
+        text-align: center;
+    }
+
+    .header-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        max-width: 60%;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .grid-container{
+        margin-left: -22px;
+    }
+
     .espaciador{
         margin-top: 62%;
     }
+
+    .header-logo {
+        margin: 0px 100px;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
   }
+
+  @media (min-width:820px) and (max-width:1023px) {
+    .indice-toggle{
+        max-width: 90%;
+    }
+    .header-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        max-width: 60%;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .grid-text{
+        text-align: center;
+    }
+
+    .grid-texto{
+        text-align: center;
+    }
+    
+
+    .header-logo {
+        margin: 0px 60px;
+        margin-left: 60px;
+        margin-right: 60px;
+      }
+
+    .whatsapp-button {
+        bottom: 80px !important; /* Aumentamos la distancia desde abajo */
+        right: 15px !important; /* Ajustamos la distancia desde la derecha */
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .indice-content {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 90%;
+        max-width: 60%;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .indice-content.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        margin-right: 11%;
+        max-width: 80%;
+        max-height: 400px;
+        background-color: white;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        overflow-y: auto; /* Permite el desplazamiento vertical */
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        z-index: 1001;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .indice-content h2 {
+        font-size: 20px;
+    }
+
+    .header-links.active,
+    .indice-content.active {
+        display: block;
+    }
+    .grid-image {
+        max-width: 250px;
+    }
+
+    .imagenDetalles {
+        max-width: 300px;
+    }
+
+    .texto-izquierda {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .header-logo{
+        width: 280px;
+    }
+    
+  }
+
+  @media (min-width:1024px) and (max-width:1100px) {
+    .indice-toggle{
+        max-width: 90%;
+    }
+    .header-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        max-width: 40%;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .header-links a{
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .consultarProd{
+        margin-left: 60px;
+        font-size: 16px;
+    }
+
+    .botonesreservas{
+        margin-left: -10px;
+    }
+
+    .whatsapp-button {
+        bottom: 80px !important; 
+        right: 15px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .indice-content {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 90%;
+        max-width: 60%;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .indice-content.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        margin-right: 11%;
+        max-width: 80%;
+        max-height: 400px;
+        background-color: white;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        overflow-y: auto; /* Permite el desplazamiento vertical */
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        z-index: 1001;
+        padding: 20px;
+        text-align: left;
+    }
+    .indice-content h2 {
+        font-size: 20px;
+    }
+
+    .header-links.active,
+    .indice-content.active {
+        display: block;
+    }
+    .grid-image {
+        max-width: 250px;
+    }
+
+    .imagenDetalles {
+        max-width: 300px;
+    }
+
+    .texto-izquierda {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .header-logo{
+        width: 280px;
+    }
+    .grupo-tituloreservas {
+        margin-left: 5%;
+      }
+      
+    .productos-seleccionados {
+        margin-left: 5%;
+    }
+    
+    .subtitulo-reservas{
+        margin-left: -2%;
+    }
+
+    main > *:first-child {
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+
+    .asideReservas{
+        margin-bottom: 0%;
+    }
+
+    aside{
+        margin-bottom: -40%;
+    }
+    .indice-toggle{
+        padding: 0;
+        display: block;
+        margin-right: 1%;
+    }
+
+    .menu-toggle{
+        padding: 0%;
+        margin-top: 7%;
+        margin-left: 1%;
+        width: 6%;
+    }
+
+    .espaciador{
+        margin-top: 60%;
+    }
+
+    main{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .header-links.active{
+        margin-top: 7%;
+    }
+
+    .indice-content.active{
+        margin-top: 7%;
+    }
+
+    .header-logo{
+        margin-left: 60px;
+    }
+    .logogva{
+        margin-left: 55px;
+    }
+  }
+
+  @media (max-width: 767px){
+    .grid-text {
+        text-align: center;
+    }
+
+    .grid-texto{
+        text-align: center;
+    }
+
+    .header-logo{
+        margin-left: 60px;
+    }
+  }
+  
